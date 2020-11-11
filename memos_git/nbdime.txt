@@ -1,0 +1,22 @@
+# install nbdime
+$ pip install --upgrade
+nbdime extensions --enable [--sys-prefix/--user/--system]
+$ nbdime extensions --enable --system
+jupyter serverextension enable --py nbdime [--sys-prefix/--user/--system]
+$ jupyter serverextension enable --py nbdime  --system
+jupyter nbextension install --py nbdime [--sym-link] [--sys-prefix/--user/--system]
+$ jupyter nbextension install --py nbdime --system
+jupyter nbextension enable --py nbdime [--sys-prefix/--user/--system]
+$ jupyter nbextension enable --py nbdime --system
+
+# activate the extensions
+$ nbdime extensions --enable --system
+
+do it for base and myenv because:
+
+(base)$ which jupyter
+/opt/anaconda3/bin/jupyter
+
+$ conda activate myenv
+(myenv) chiaras-macbook-pro:memos_git chiaracavallari$ which jupyter
+/opt/anaconda3/envs/myenv/bin/jupyter
