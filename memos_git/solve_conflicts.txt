@@ -1,0 +1,22 @@
+# How to solve CONFLICTS
+A git conflict generates when my local version is different from the on on the
+remote repository. It can happen in a collaborative project if two (or more
+people) modify the same file in the "same" lines of code. So that, when git is
+asked to merge, it does not what version to keep
+
+1 ) $ git pull origin master
+# apperance of the conflict
+
+filexx is both modified
+The filexx appears modified, Git has modified it with conflict markers
+
+2 ) correct the local version according to your choice and save it. Git is still
+in conflict though, I need to commit manually
+
+3) $ git status
+4) $ git add filexx
+$ git status
+5) $ git commit
+$ git status
+Now it is clear! I can push it!
+6) $ git push origin master

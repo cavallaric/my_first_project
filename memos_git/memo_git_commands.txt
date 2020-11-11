@@ -1,0 +1,55 @@
+# GIT MEMO
+
+$ git init
+it initialises a git repository in your local folder (producing .git)
+
+$ git status
+It displays the state of the working directory and the staging area.
+It lets you see which changes have been staged, which haven’t,
+and which files aren’t being tracked by Git
+
+$ git add myfile.txt
+It adds myfile.txt to the index
+other uses
+$ git add . # add all the files to the repository (a bit dangerous as you might
+add things that you do no want!)
+$ git add -u # add the files that belong to the index already
+$ git help add # to have more info about the usage
+
+$ git commit -m "added myfile"
+It records changes to your local repository
+$ git commit # no message after a conflict. A message is automatically
+generated in this case
+
+$ git log
+It gives the history of the commits done - with their sha
+
+$ git diff
+$ git diff 9033dc3 22f3e17
+It gives the changes between two commits (last two by default or specified
+by the sha) in my local version
+
+$ git remote add originkya https://github.com/cavallaric/my_first_project.git
+$ git remote -v
+It manages a set of tracked repositories (for push and fetch/merge/pull).
+It adds originkya if not existing, -verbose to have the details
+
+$ git pull originkya master
+It fetches ($ git fetch) from the specified remote repository originkya
+and merges (& $ git merge) with the local master branch
+
+$ git push originkya master
+# $ git push "remote" "branch_in the_destination_repo"
+It updates my remote repository on the server originkya
+by pushing my local changes of the branch master
+
+$ git clone https://github.com/A-Martin-Tissier/GIT_pandas-examples
+It clones a repository (from Antoine's GitHub) into a new (local) repository
+
+$ git checkout -b newbranch
+It created and switches to the newbranch from the commit where I am (HEAD)
+$ git checkout master
+It goes back to master
+$ git checkout 6ed7eb9
+It goes back to the stage corresponding to the given sha, in the branch where I
+am
